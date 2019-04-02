@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LoginPageChapter extends AppCompatActivity {
     String emailPattern = "[a-zA-Z0-9._-]+@stu.upes.ac.in";
     FirebaseAuth firebaseauth;

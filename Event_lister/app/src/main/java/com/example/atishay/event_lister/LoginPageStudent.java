@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LoginPageStudent extends AppCompatActivity {
     String emailPattern = "[a-zA-Z0-9._-]+@stu.upes.ac.in";
     FirebaseAuth firebaseauth;
@@ -25,7 +30,7 @@ public class LoginPageStudent extends AppCompatActivity {
         Boolean valid=false;
         String email=emailtext.getText().toString();
         String password=passwordtext.getText().toString();
-        firebaseauth=FirebaseAuth.getInstance();
+        firebaseauth= FirebaseAuth.getInstance();
 
 
         if(emailtext.getText().toString().equals("")||passwordtext.getText().toString().equals("")||!(emailtext.getText().toString().matches(emailPattern)))
